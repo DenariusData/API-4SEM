@@ -41,7 +41,7 @@ Foi desenvolvido um Sistema Inteligente de Monitoramento e Alerta de Tráfego. E
 
 ## 📋 Backlog do Produto
 
-| Rank | Prioridade | User Story | Estimativa | Sprint |
+| Rank | Prioridade | User Story | Story Points | Sprint |
 |-|-|-|-|-|
 | 1 | 🔴 Alta | Como gestor, quero informações sobre o trânsito em forma de dashboards, gráficos e tabelas para auxiliar minha tomada de decisão na diminuição de trânsito | 48 | 1 |
 | 2 | 🔴 Alta | Como usuário da plataforma, quero um mapa na tela inicial, que tenha as divisões das zonas da cidade de São José dos Campos, para que eu possa ter uma visão detalhada dos locais que o sistema possui informação | 30 | 1 |
@@ -53,63 +53,6 @@ Foi desenvolvido um Sistema Inteligente de Monitoramento e Alerta de Tráfego. E
 | 8 | 🟡 Média | Como gestor, quero que as zonas tenham informações das principais vias demarcadas e que apresentem o congestionamento dessa via, para que eu possa atuar de forma mais rápida e precisa em pontos críticos da cidade | 20 | 2 |
 | 9 | 🟡 Média | Como gestor, quero poder criar “causas raíz” para alertas disparados e poder criar protocolos para essas “causas raíz”, para que o agente tenha uma orientação de como resolver os alertas que surgirem | 18 | 2 |
 | 10 | 🟡 Média | Como agente, quero poder visualizar um alerta específico, para que possa documentar informações sobre este alerta, obter informações sobre como resolver o problema que gerou o alerta e finalizá-lo | 33 | 3 |
-| 11 | 🟢 Baixa | Como gestor, quero ter logs dos alertas gerados, para registro de auditoria e estudo de histórico do comportamento do trânsito | 6 | 3 |
-| 12 | 🟢 Baixa | Como gestor, quero um chat interno no produto para que eu possa consultar informações que estão no banco de forma simplificada | 42 | 3 |
-
-→ [Voltar ao topo](#denarius-data)
-
----
-
-### Backlog das Sprints
-
-### 1️⃣ Sprint 1
-
-Capacidade estimada da Equipe na Sprint: 135 Story points (horas)
-
-Meta da Sprint: User Stories de rank 1 e rank 2 (total de 78 Story Points)
-
-Previsão da Sprint: User Story de rank 3 (42 Story Points)
-
-[Spring Planning - DoR / DoD](https://github.com/DenariusData/API-4SEM/tree/main/docs#1%EF%B8%8F%E2%83%A3-sprint-1)
-
-| Rank | Prioridade | User Story | Estimativa | Sprint |
-|-|-|-|-|-|
-| 1 | 🔴 Alta | Como gestor, quero informações sobre o trânsito em forma de dashboards, gráficos e tabelas para auxiliar minha tomada de decisão na diminuição de trânsito | 48 | 1 |
-| 2 | 🔴 Alta | Como usuário da plataforma, quero um mapa na tela inicial, que tenha as divisões das zonas da cidade de São José dos Campos, para que eu possa ter uma visão detalhada dos locais que o sistema possui informação | 30 | 1 |
-| 3 | 🔴 Alta | Como usuário publico ou como agente, quero uma tela com a documentação dos indicadores para saber o que está sendo avaliado na exibição do mapa da cidade | 42 | 1 |
-
-### 2️⃣ Sprint 2
-
-Capacidade estimada da Equipe na Sprint: 116 Story points (horas)
-
-Meta da Sprint: User Stories de rank 7 e rank 9 (total de 57 Story Points)
-
-Previsão da Sprint: User Story de rank 10 (33 Story Points)
-
-[Spring Planning - DoR / DoD](https://github.com/DenariusData/API-4SEM/tree/main/docs#2%EF%B8%8F%E2%83%A3-sprint-2)
-
-| Rank | Prioridade | User Story | Estimativa | Sprint |
-|-|-|-|-|-|
-| 7 | 🟡 Média | Como agente e como gestor, quero receber alertas quando houver mudança nos níveis de qualquer indicador, para que eu tenha noção de quando o trânsito piorar e possa tomar medidas para solucionar o problema | 39 | 2 |
-| 9 | 🟡 Média | Como gestor, quero poder criar “causas raíz” para alertas disparados e poder criar protocolos para essas “causas raíz”, para que o agente tenha uma orientação de como resolver os alertas que surgirem | 18 | 2 |
-| 10 | 🟡 Média | Como agente, quero poder visualizar um alerta específico, para que possa documentar informações sobre este alerta, obter informações sobre como resolver o problema que gerou o alerta e finalizá-lo | 33 | 3 |
-
-### 3️⃣ Sprint 3
-
-Capacidade estimada da Equipe na Sprint: 116 Story points (horas)
-
-Meta da Sprint: User Stories de rank 4, rank 5, rank 6, rank 8 e rank 11 (total de 76 Story Points)
-
-Previsão da Sprint: User Story de rank 12 (42 Story Points)
-
-[Spring Planning - DoR / DoD](https://github.com/DenariusData/API-4SEM/tree/main/docs#3%EF%B8%8F%E2%83%A3-sprint-3)
-
-| Rank | Prioridade | User Story | Estimativa | Sprint |
-|-|-|-|-|-|
-| 4 | 🟡 Média | Como gestor, quero que a tela de documentação dos indicadores (rank 3) ofereça a possibilidade de adicionar, editar e deletar os indicadores, para que eu tenha controle sobre o monitoramento do trânsito da cidade | 22 | 3 |
-| 5 | 🟡 Média | Como gestor, quero ter a possibilidade de alterar as definições dos níveis referentes a um indicador sem modificar a quantidade de níveis existentes, para que o disparo de alertas, que dependem desses níveis, ocorram em momentos controlados | 12 | 3 |
-| 6 | 🟡 Média | Como gestor, quero poder associar um usuário agente a uma zona ou usuário gestor a uma zona, para que recebam informações específicas e centralizadas para atuar | 16 | 3 |
-| 8 | 🟡 Média | Como gestor, quero que as zonas tenham informações das principais vias demarcadas e que apresentem o congestionamento dessa via, para que eu possa atuar de forma mais rápida e precisa em pontos críticos da cidade | 20 | 3 |
 | 11 | 🟢 Baixa | Como gestor, quero ter logs dos alertas gerados, para registro de auditoria e estudo de histórico do comportamento do trânsito | 6 | 3 |
 | 12 | 🟢 Baixa | Como gestor, quero um chat interno no produto para que eu possa consultar informações que estão no banco de forma simplificada | 42 | 3 |
 
