@@ -14,6 +14,9 @@
     <a href="#cronograma-de-sprints">Cronograma de Sprints</a>  |  
     <a href="#tecnologias">Tecnologias</a> | 
     <a href="#manual-de-instalacao">Manual de Instalação</a> | 
+    <a href="#manual-do-usuario">Manual do Usuário</a> | 
+    <a href="#documentacao-api">Documentação API</a> | 
+    <a href="#modelagem-de-banco-de-dados">Modelagem de Banco de Dados</a> | 
     <a href="#equipe">Equipe</a>
 </p>
 
@@ -124,6 +127,36 @@ Foi desenvolvido um Sistema Inteligente de Monitoramento e Alerta de Tráfego. E
 ## 📖 Manual de instalação
 
 TODO
+
+→ [Voltar ao topo](#denarius-data)
+
+---
+
+<span id="manual-do-usuario">
+
+## 📘 Manual do usuário
+
+TODO
+
+→ [Voltar ao topo](#denarius-data)
+
+---
+
+<span id="documentacao-api">
+
+## 📓 Documentação API
+
+TODO
+
+→ [Voltar ao topo](#denarius-data)
+
+---
+
+<span id="modelagem-de-banco-de-dados">
+
+## 🖥️ Modelagem de Banco de Dados
+
+<img src="./docs/media/modelagem-banco-de-dados.jpeg" />
 
 → [Voltar ao topo](#denarius-data)
 
