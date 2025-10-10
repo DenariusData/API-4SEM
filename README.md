@@ -156,7 +156,7 @@ TODO
 
 ## 🖥️ Modelagem de Banco de Dados
 
-<img src="./docs/media/modelagem-banco-de-dados.jpeg" />
+<img src="./docs/media/modelagem-banco-de-dados.png" />
 
 → [Voltar ao topo](#denarius-data)
 
