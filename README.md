@@ -20,7 +20,7 @@
     <a href="#equipe">Equipe</a>
 </p>
 
-> Status do Projeto: Planejamento da Sprint 2 🟡 <br /><br />
+> Status do Projeto: Sprint 2 🟢 <br /><br />
 > Pasta de Documentação: [Link](https://github.com/DenariusData/API-4SEM/tree/main/docs) 📄 <br /><br />
 > Vídeo do Projeto: [A ser feito]() 📽️
 
