@@ -146,7 +146,7 @@ Foi desenvolvido um Sistema Inteligente de Monitoramento e Alerta de Tráfego. E
 
 ## 📓 Documentação API
 
-<img height="300" alt="construcao" src="./docs/media/em-construcao.jpeg" />
+[Acessar Documentação Swagger](https://drive.google.com/drive/folders/1cTevsjRi3AkroBniEprjlUZcLx0zNM3g?usp=sharing)
 
 → [Voltar ao topo](#denarius-data)
 
