@@ -165,7 +165,8 @@ Acesso ao manual pelo [Link](https://github.com/DenariusData/API-4SEM/blob/main/
 
 ## 📘 Manual do usuário
 
-<img height="300" alt="construcao" src="./docs/media/em-construcao.jpeg" />
+Acesso ao manual pelo [Link](https://github.com/DenariusData/API-4SEM/blob/main/docs/user/README.md)
+<br />
 
 → [Voltar ao topo](#denarius-data)
 
