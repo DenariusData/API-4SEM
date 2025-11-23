@@ -1,84 +1,222 @@
-# Manual de Instalação do Projeto Vue com Spring e Docker
+# 📖 Manual de Instalação - Denarius Data
 
-Este documento descreve os passos para configurar e executar uma aplicação composta por um frontend em Vue.js e um backend em Spring, utilizando Docker para gerenciar o banco de dados PostgreSQL.
+Bem-vindo ao guia de instalação do **Denarius Data**! Este documento vai te orientar passo a passo para configurar e executar a aplicação completa do projeto.
 
-## Pré-requisitos
+## 🎯 O que você vai instalar?
 
-Antes de começar, certifique-se de que os seguintes softwares estão instalados na sua máquina:
+Este projeto é composto por:
+- **Frontend**: Interface web desenvolvida em Vue.js 3
+- **Backend**: API RESTful desenvolvida em Spring Boot (Java 21)
+- **Banco de Dados**: Oracle Database (via Oracle Cloud)
+- **Docker**: Para orquestrar e executar todos os serviços
 
-- **[Node.js](https://nodejs.org/en/download) e npm**: Necessário para gerenciar e servir o frontend Vue.js.
-- **[Java 21](https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu)**: Requerido para executar o arquivo .jar do backend Spring.
-- **[Docker](https://www.docker.com/products/docker-desktop/)**: Usado para criar e gerenciar o container do PostgreSQL.
+## 📋 Pré-requisitos
 
-## Passos de Instalação
+Antes de começar, você precisará ter instalado em sua máquina:
 
-1. **Baixar os arquivos do projeto**
-   - Faça o download da pasta do projeto no Google Drive: [Link para a pasta TO DO]().
-   - A pasta contém:
-     - A pasta `dist` com o build do frontend Vue.js.
-     - O arquivo `.jar` do backend Spring.
-     - O arquivo `compose.yaml` para configurar o Docker.
+### Obrigatório:
+- **[Git](https://git-scm.com/downloads)** - Para clonar o repositório
+- **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** - Para Windows, Linux ou Mac
+  - ⚠️ Certifique-se de que o Docker Desktop está em execução antes de prosseguir
 
-2. **Instalar a biblioteca `serve` globalmente**
-   - Abra um terminal e execute o seguinte comando para instalar a biblioteca `serve` globalmente com npm:
-     ```bash
-     npm install -g serve
-     ```
+### Opcional (apenas se NÃO usar Docker):
+- **[Node.js 20+](https://nodejs.org/)** e npm - Para executar o frontend manualmente
+- **[Java 21](https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu)** - Para executar o backend manualmente
 
-3. **Criar e iniciar o container do PostgreSQL**
-   - No diretório onde está o arquivo `compose.yaml`, execute o comando abaixo para iniciar o container do PostgreSQL:
-     ```bash
-     docker-compose -f compose.yaml up -d
-     ```
-   - Isso criará e iniciará o container do banco de dados em segundo plano. Certifique-se de que o Docker está em execução.
+## 🚀 Instalação Rápida (Recomendado)
 
-4. **Executar o backend Spring**
-   - No diretório onde está o arquivo `.jar`, execute o comando abaixo para iniciar a aplicação Spring:
-     ```bash
-     java -jar checkpoint.jar
-     ```
-   - Substitua `checkpoint.jar` pelo nome real do arquivo .jar baixado.
-   - Aguarde até que a aplicação Spring esteja completamente inicializada.
+### Passo 1: Clone o repositório
 
-5. **Servir o frontend Vue.js**
-   - Navegue até o diretório onde está a pasta `dist` do frontend e execute o comando:
-     ```bash
-     serve -s dist -p 3000
-     ```
-   - Isso servirá o frontend na porta 3000.
+Abra um terminal e execute:
 
-6. **Acessar a aplicação**
-   - Abra um navegador e acesse: [http://localhost:3000](http://localhost:3000).
-   - A aplicação Vue.js estará disponível, conectada ao backend Spring e ao banco de dados MySQL.
+```bash
+git clone https://github.com/DenariusData/API-4SEM.git
+cd API-4SEM
+```
 
-## Possíveis Erros
+### Passo 2: Baixe os submódulos
 
-- **MySQL já instalado na máquina**
-  - Se o MySQL já está instalado localmente e em execução, pode haver um conflito de portas (geralmente a porta 5432). Para resolver:
-    - Verifique se o MySQL local está rodando com:
-      ```bash
-      ps aux | grep mysql
-      ```
-    - Pare o serviço local, se necessário:
-      ```bash
-      sudo systemctl stop mysql
-      ```
-    - Alternativamente, edite o arquivo `compose.yaml` para usar uma porta diferente para o container do PostgreSQL, modificando a seção de portas, por exemplo:
-      ```yaml
-      ports:
-        - "5433:5432"
-      ```
-    - Após alterar a porta, atualize as configurações de conexão no backend Spring (geralmente em `application.properties` ou `application.yml`) para apontar para a nova porta.
+O projeto utiliza submódulos Git para o frontend e backend:
 
-## Contato
+```bash
+git submodule update --init --recursive
+```
 
-Para suporte ou dúvidas, entre em contato com:
-- **Email**: davisfs2110@gmail.com
+### Passo 3: Configure o Oracle Wallet
 
-## Notas
-- Certifique-se de que as portas necessárias (como 3000 para o frontend e a porta configurada no Spring, geralmente 8080) não estão em uso.
-- Caso o PostgreSQL exija configurações específicas (como usuário, senha ou nome do banco), verifique o arquivo `compose.yaml` e ajuste as variáveis de ambiente conforme necessário.
-- Para parar os containers do Docker, use:
-  ```bash
-  docker-compose -f compose.yaml down
-  ```
+O projeto utiliza Oracle Database com autenticação via Wallet. Certifique-se de que a pasta `Wallet_radarius` está presente em:
+
+```
+API-4SEM-BACKEND/Wallet_radarius/
+```
+
+> 💡 **Nota**: Os arquivos do Wallet são necessários para conectar ao banco de dados Oracle. Entre em contato com a equipe se você não tiver acesso a esses arquivos.
+
+### Passo 4: Inicie a aplicação com Docker
+
+No diretório raiz do projeto (`API-4SEM`), execute:
+
+```bash
+docker-compose up --build
+```
+
+Este comando irá:
+- ✅ Construir as imagens Docker do frontend e backend
+- ✅ Iniciar os containers
+- ✅ Configurar a rede entre os serviços
+- ✅ Disponibilizar a aplicação
+
+**Aguarde alguns minutos** enquanto o Docker faz o download das dependências e constrói os containers. Você verá logs no terminal indicando o progresso.
+
+### Passo 5: Acesse a aplicação
+
+Após a inicialização completa, acesse:
+
+- **🌐 Frontend**: http://localhost
+- **🔧 API Backend**: http://localhost:8080
+- **💚 Health Check**: http://localhost:8080/actuator/health
+
+## 🎨 Modo de Desenvolvimento
+
+Se você preferir executar a aplicação em modo de desenvolvimento (sem Docker):
+
+### Frontend
+```bash
+cd API-4SEM-FRONTEND
+npm install
+npm run dev
+```
+Acesse em: http://localhost:5173
+
+### Backend
+```bash
+cd API-4SEM-BACKEND
+./gradlew bootRun
+```
+ou
+```bash
+java -jar build/libs/radarius-backend.jar
+```
+
+## 🛠️ Comandos Úteis do Docker
+
+### Ver logs da aplicação
+```bash
+# Ver todos os logs
+docker-compose logs -f
+
+# Ver logs apenas do backend
+docker-compose logs -f backend
+
+# Ver logs apenas do frontend
+docker-compose logs -f frontend
+```
+
+### Parar a aplicação
+```bash
+docker-compose down
+```
+
+### Parar e remover volumes
+```bash
+docker-compose down -v
+```
+
+### Reconstruir após alterações
+```bash
+docker-compose up --build
+```
+
+### Executar em segundo plano (detached mode)
+```bash
+docker-compose up -d
+```
+
+## 🔧 Resolução de Problemas
+
+### ❌ Porta 80 ou 8080 já está em uso
+
+**Problema**: Outro serviço está usando as portas necessárias.
+
+**Solução**: Edite o arquivo `docker-compose.yml` e altere as portas:
+
+```yaml
+services:
+  backend:
+    ports:
+      - "8081:8080"  # Mude 8080 para 8081
+  frontend:
+    ports:
+      - "3000:80"    # Mude 80 para 3000
+```
+
+### ❌ Docker não está em execução
+
+**Problema**: O Docker Desktop não foi iniciado.
+
+**Solução**: 
+- No Windows: Abra o Docker Desktop pelo menu Iniciar
+- No Linux: Execute `sudo systemctl start docker`
+- No Mac: Abra o Docker Desktop pela barra de aplicativos
+
+### ❌ Erro de conexão com o banco de dados
+
+**Problema**: Arquivos do Wallet estão ausentes ou inválidos.
+
+**Solução**:
+1. Verifique se a pasta `API-4SEM-BACKEND/Wallet_radarius` existe
+2. Verifique se os arquivos do Wallet estão presentes
+3. Entre em contato com a equipe para obter os arquivos corretos
+
+### ❌ Submódulos vazios
+
+**Problema**: As pastas `API-4SEM-BACKEND` e `API-4SEM-FRONTEND` estão vazias.
+
+**Solução**:
+```bash
+git submodule update --init --recursive
+```
+
+### ❌ Build falhou
+
+**Problema**: Erro durante a construção das imagens Docker.
+
+**Solução**:
+1. Limpe as imagens antigas:
+   ```bash
+   docker-compose down --rmi all
+   docker system prune -a
+   ```
+2. Reconstrua:
+   ```bash
+   docker-compose up --build
+   ```
+
+## 📊 Verificando se está tudo funcionando
+
+Execute estas verificações para garantir que tudo está OK:
+
+1. ✅ **Docker**: `docker ps` deve mostrar 2 containers rodando
+2. ✅ **Backend**: Acesse http://localhost:8080/actuator/health - deve retornar `{"status":"UP"}`
+3. ✅ **Frontend**: Acesse http://localhost - deve carregar a página inicial
+4. ✅ **Logs**: `docker-compose logs` não deve mostrar erros críticos
+
+## 📚 Próximos Passos
+
+Agora que a aplicação está instalada e rodando:
+
+1. 📖 Consulte o [Manual do Usuário](../user/README.md) para aprender a usar o sistema
+2. 🔍 Veja a [Documentação da API](../../README.md#documentacao-api) para entender os endpoints
+3. 🗄️ Confira a [Modelagem do Banco de Dados](../../README.md#modelagem-de-banco-de-dados)
+
+## 💬 Precisa de Ajuda?
+
+Entre em contato com a equipe Denarius Data:
+
+- 📧 **Email de Suporte**: davisfs2110@gmail.com
+
+---
+
+<p align="center">
+  Feito com ❤️ e 🤖 pela equipe <strong>Denarius Data</strong>
+</p>
