@@ -1,8 +1,8 @@
 [submodule "API-4SEM-FRONTEND"]
     path = API-4SEM-FRONTEND
     url = git@github.com:DenariusData/API-4SEM-FRONTEND.git
-    branch = sprint-2
+    branch = main
 [submodule "API-4SEM-BACKEND"]
     path = API-4SEM-BACKEND
     url = git@github.com:DenariusData/API-4SEM-BACKEND.git
-    branch = sprint-2
+    branch = main
