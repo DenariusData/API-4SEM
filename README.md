@@ -20,7 +20,7 @@
     <a href="#equipe">Equipe</a>
 </p>
 
-> Status do Projeto: Adequação da Sprint 3 🟡 <br /><br />
+> Status do Projeto: Finalizado ✅ <br /><br />
 > Pasta de Documentação: [Link](https://github.com/DenariusData/API-4SEM/tree/main/docs) 📄 <br /><br />
 > Vídeo do Projeto: [A ser feito]() 📽️
 
@@ -165,7 +165,7 @@ Acesso ao manual pelo [Link](https://github.com/DenariusData/API-4SEM/blob/main/
 
 ## 📘 Manual do usuário
 
-Acesso ao manual pelo [Link](https://github.com/DenariusData/API-4SEM/blob/main/docs/user/README.md)
+Acesso ao manual pelo [Link](https://drive.google.com/file/d/1L-FXcJWop9PP2Nl430whKPjNdSdH5czI/view?usp=sharing)
 <br />
 
 → [Voltar ao topo](#denarius-data)
@@ -176,7 +176,7 @@ Acesso ao manual pelo [Link](https://github.com/DenariusData/API-4SEM/blob/main/
 
 ## 📓 Documentação API
 
-[Acessar Documentação Swagger](https://drive.google.com/drive/folders/1cTevsjRi3AkroBniEprjlUZcLx0zNM3g?usp=sharing)
+Acessar à documentação Swagger pelo [Link](https://drive.google.com/drive/folders/1cTevsjRi3AkroBniEprjlUZcLx0zNM3g?usp=sharing)
 
 → [Voltar ao topo](#denarius-data)
 
